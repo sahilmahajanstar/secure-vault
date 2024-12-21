@@ -1,0 +1,48 @@
+{
+    "name": "secure-vault-fe",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --port 3000 --host",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "format-fix": "prettier --config .prettierrc --write --ignore-unknown ."
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@mui/material": "^6.2.1",
+        "@mui/x-data-grid": "^7.23.3",
+        "@reduxjs/toolkit": "^2.5.0",
+        "@types/react-modal": "^3.16.3",
+        "add": "^2.0.6",
+        "axios": "^1.7.9",
+        "buffer": "^6.0.3",
+        "crypto": "^1.0.1",
+        "react": "^18.3.1",
+        "react-circular-progressbar": "^2.1.0",
+        "react-doc-viewer": "^0.1.14",
+        "react-dom": "^18.3.1",
+        "react-modal": "^3.16.3",
+        "react-redux": "^9.2.0",
+        "react-router-dom": "^7.0.2",
+        "redux-persist": "^6.0.0",
+        "yarn": "^1.22.22"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@types/node": "^22.10.2",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "@vitejs/plugin-react": "^4.3.4",
+        "eslint": "^9.15.0",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "eslint-plugin-react-refresh": "^0.4.14",
+        "globals": "^15.12.0",
+        "typescript": "~5.6.2",
+        "typescript-eslint": "^8.15.0",
+        "vite": "^6.0.1"
+    }
+}
