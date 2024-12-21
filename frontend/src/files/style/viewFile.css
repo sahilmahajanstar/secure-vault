@@ -1,0 +1,13 @@
+.page-number-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: '500px';
+}
+
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 50vw !important;
+    height: 95vh !important;
+    scale: 0.9;
+}

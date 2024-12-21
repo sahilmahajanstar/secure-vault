@@ -1,0 +1,91 @@
+.user-info-container {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.user-info-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+.user-info-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-info-header h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.user-info-header p {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.user-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info-item:last-child {
+    border-bottom: none;
+}
+
+.user-info-label {
+    font-weight: bold;
+}
+
+.user-info-value {
+    color: #ffffff;
+}
+
+.edit-button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.edit-button:hover {
+    background: #45a049;
+}
+
+.edit-button:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+    .user-info-card {
+        padding: 20px;
+    }
+
+    .user-info-header h2 {
+        font-size: 24px;
+    }
+}
