@@ -9,8 +9,8 @@ services:
         target: /app
     ports:
       - "8000:8000"
-    command: python manage.py runserver_plus 0.0.0.0:8000 --cert-file cert/cert.pem --key-file cert/key.pem
     
+    command: bash -c "./setup.bash && python manage.py runserver_plus 0.0.0.0:8000 --cert-file cert/cert.pem --key-file cert/key.pem"
     networks:
       - app-network
 

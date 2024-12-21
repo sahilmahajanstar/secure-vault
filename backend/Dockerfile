@@ -21,6 +21,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
+RUN chmod +x ./setup.bash
+# Build for production
+
+
 # Run migrations and start server
 CMD python manage.py migrate && \
     python manage.py collectstatic --no-input
