@@ -7,7 +7,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL
 
 const axiosInstance = axios.create({
     baseURL: API_BASE_URL,
-    timeout: 10000,
+    timeout: 60000,
     headers: {
         'Content-Type': 'application/json',
     },
@@ -52,8 +52,8 @@ axiosInstance.interceptors.response.use(
                     '/auth/refresh/',
                     {
                         refresh_token: refreshToken,
-                        // @ts-expect-error axios doesn't support _retry
                     },
+                    // @ts-expect-error axios doesn't support _retry
                     { _retry: true },
                 )
                 const { token, user } = response.data.data

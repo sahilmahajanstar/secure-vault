@@ -11,6 +11,7 @@ const FileUploader: React.FC = () => {
     const [files, setFiles] = useState<File[]>([])
     const [error, setError] = useState<string>('')
     const [progress, setProgress] = useState<number>(0)
+    const [loading, setLoading] = useState<boolean>(false)
     const navigate = useNavigate()
     const fileUploadRequestBuilder = useMemo(
         () => new FileUploadRequestBuilder(),
@@ -34,8 +35,8 @@ const FileUploader: React.FC = () => {
             setError('Please select files to upload.')
             return
         }
-
         try {
+            setLoading(true)
             fileUploadRequestBuilder.setFiles(files)
             await filesApi.uploadFile(
                 fileUploadRequestBuilder,
@@ -45,7 +46,10 @@ const FileUploader: React.FC = () => {
             )
             navigate('/files/list')
         } catch (err) {
+            console.log(err)
             setError((err as Error).message ?? 'failed to upload files')
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -87,7 +91,7 @@ const FileUploader: React.FC = () => {
             </div>
 
             {error && <p>{error}</p>}
-            <button disabled={progress > 0} onClick={handleUpload}>
+            <button disabled={progress > 0 || loading} onClick={handleUpload}>
                 Upload
             </button>
             <ul>
